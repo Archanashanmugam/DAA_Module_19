@@ -21,14 +21,10 @@ Register Number: 212222040010
 ```
 
 def reverse_string(s):
-    """
-    Recursive function to reverse a string
-    """
-    if len(s) <= 1:  # base case: if the string is empty or has only one character, return it as is
+    if len(s) == 0:  
         return s
     else:
-        return reverse_string(s[1:]) + s[0]  
-
+        return s[-1] + reverse_string(s[:-1]) 
 
 input_string = input()
 reversed_string = reverse_string(input_string)
